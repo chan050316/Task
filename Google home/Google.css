@@ -82,7 +82,9 @@ section .searchBox {
   justify-content: center;
   align-items: center;
 }
-
+.searchBox .searchIconBoxClick {
+  border-radius: 15px 0 0 0;
+}
 
 .searchBox .searchIconBox .searchIcon {
   font-size: 20px;
@@ -104,6 +106,9 @@ section .searchBox {
 .searchBox .searchIconBox:nth-child(3) {
   border-radius: 0 35px 35px 0;
 }
+.searchBox .searchIconBoxClick:nth-child(3) {
+  border-radius: 0 15px 0 0;
+}
 
 .searchBox .searchIconBox .micIcon {
   font-size: 22px;
@@ -111,6 +116,44 @@ section .searchBox {
 }
 .searchBox .searchIconBox .micIcon:hover, .searchIcon {
   cursor: default;
+}
+
+section .searchBoxClick {
+  position: absolute;
+  top: 338px;
+  width: 564px;
+  height: 363px;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+}
+
+.searchBoxClick .searchBoxClick__TextBox {
+  font-family: 'Roboto', sans-serif;
+  height: 43.8px;
+  width: 564px;
+  display: flex;
+  align-items: center;
+}
+.searchBoxClick .searchBoxClick__TextBox-Hover {
+  background-color: rgba(50, 50, 50, .1);
+  cursor: default;
+}
+
+.searchBoxClick .scheduleIcon {
+  font-size: 16px;
+  padding: 0 21px;
+  color: gray;
+}
+
+.searchBoxClick .searchBoxClick__Text {
+  height: auto;
+}
+
+.searchBoxClick .closeIcon {
+  font-size: 16px;
+  color: gray;
+  margin-left: auto;
+  padding-right: 23px;
 }
 
 /* footer */
