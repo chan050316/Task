@@ -63,10 +63,10 @@ function Search(event) {
 
 function addSearchedWord(event) {
   if(event.keyCode === 13 && searchBarEl.value !== "") {
-    console.log(2);
     const Text = {Text : searchBarEl.value};
     searchBoxClick__TextBoxs.unshift(Text);
-    searchBoxClick__TextBoxs.pop()
+    searchBoxClick__TextBoxs.pop();
+    searchBarEl.value = "";
   }
   document.querySelector('#jssearchBoxClick').innerHTML =  ``
   buildingHTML()
@@ -82,6 +82,6 @@ function textBoxOut(event) {
 
 window.addEventListener('load', buildingHTML)
 bodyEl.addEventListener('click', Search);
-searchBarEl.addEventListener('keyup', addSearchedWord);
+searchBarEl.addEventListener('keypress', addSearchedWord);
 searchBoxClick__TextBoxEl.forEach(text => text.addEventListener('mouseenter', textBoxHover));
 searchBoxClick__TextBoxEl.forEach(text => text.addEventListener('mouseleave', textBoxOut));
