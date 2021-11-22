@@ -134,7 +134,7 @@ section .searchBoxClick {
   display: flex;
   align-items: center;
 }
-.searchBoxClick .searchBoxClick__TextBox-Hover {
+.searchBoxClick__TextBox-Hover {
   background-color: rgba(50, 50, 50, .1);
   cursor: default;
 }

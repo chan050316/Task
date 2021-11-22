@@ -32,18 +32,18 @@ function buildingHTML() {
     <div class="searchBoxClick__TextBox">
       <span class="material-icons scheduleIcon">schedule</span>
       <div class="searchBoxClick__Text">${searchBoxClick__Text.Text}</div>
-      <span class="material-icons closeIcon">close</span>
+      <span class="material-icons closeIcon hidden">close</span>
     </div>
     `;
   }
 }
-
+buildingHTML();
 
 const bodyEl = document.querySelector('body');
 const searchBarEl = document.querySelector('#jssearchBar');
 const searchBarIconEl = document.querySelectorAll('.searchIconBox');
 const seachedWordEl = document.querySelector('#jssearchBoxClick');
-const searchBoxClick__TextBoxEl = document.querySelectorAll('.searchBoxClick__TextBox');
+const searchBoxClick__TextBoxEls = document.querySelectorAll(".searchBoxClick__TextBox");
 
 const searchBarIconEl_className = 'searchIconBoxClick';
 
@@ -69,19 +69,19 @@ function addSearchedWord(event) {
     searchBarEl.value = "";
   }
   document.querySelector('#jssearchBoxClick').innerHTML =  ``
-  buildingHTML()
+  buildingHTML();
 }
 
 function textBoxHover(event) {
   event.target.classList.add('searchBoxClick__TextBox-Hover');
+
 }
 
 function textBoxOut(event) {
   event.target.classList.remove('searchBoxClick__TextBox-Hover');
 }
 
-window.addEventListener('load', buildingHTML)
 bodyEl.addEventListener('click', Search);
 searchBarEl.addEventListener('keypress', addSearchedWord);
-searchBoxClick__TextBoxEl.forEach(text => text.addEventListener('mouseenter', textBoxHover));
-searchBoxClick__TextBoxEl.forEach(text => text.addEventListener('mouseleave', textBoxOut));
+searchBoxClick__TextBoxEls.forEach(text => text.addEventListener('mouseenter', textBoxHover));
+searchBoxClick__TextBoxEls.forEach(text => text.addEventListener('mouseleave', textBoxOut));
